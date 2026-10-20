@@ -140,7 +140,7 @@ Open the local address printed in the terminal (normally `http://localhost:8501`
 2. Open [share.streamlit.io](https://share.streamlit.io/), sign in with GitHub, and choose **Create app**.
 3. Select the repository, branch, and `app.py`, then deploy.
 
-The repository includes the small trained CPU model and generated result plots/metrics, but excludes the MIT-BIH dataset and processed cache. When the app runs without local records, the signal viewer and prediction tab fetch only the selected public record from PhysioNet. This requires outbound internet access in the hosting environment. The app does not retrain the model.
+The repository includes the small trained CPU model and generated result plots/metrics, but excludes the MIT-BIH dataset and processed cache. When the app runs without local records, the signal viewer and prediction tab fetch a 15-second preview of the selected public record from PhysioNet instead of downloading the full recording. This requires outbound internet access in the hosting environment. The app does not retrain the model.
 
 ## Experimental results
 

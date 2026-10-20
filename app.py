@@ -13,6 +13,7 @@ from src.evaluate import load_saved_model, predict_segments
 from src.preprocessing import make_heartbeat_segments
 
 REMOTE_DEMO_RECORDS = ("100", "114", "200", "208", "209", "213", "233")
+REMOTE_PREVIEW_SECONDS = 15
 
 
 st.set_page_config(page_title="ECG Arrhythmia Classification System", layout="wide")
@@ -46,8 +47,22 @@ def get_record_data(record_name: str):
         waveform, fields = wfdb.rdsamp(str(local_record), channels=[0])
         annotation = wfdb.rdann(str(local_record), "atr")
     else:
-        waveform, fields = wfdb.rdsamp(record_name, pn_dir="mitdb", channels=[0])
-        annotation = wfdb.rdann(record_name, "atr", pn_dir="mitdb")
+        header = wfdb.rdheader(record_name, pn_dir="mitdb")
+        sample_count = int(header.fs * REMOTE_PREVIEW_SECONDS)
+        waveform, fields = wfdb.rdsamp(
+            record_name,
+            pn_dir="mitdb",
+            channels=[0],
+            sampfrom=0,
+            sampto=sample_count,
+        )
+        annotation = wfdb.rdann(
+            record_name,
+            "atr",
+            pn_dir="mitdb",
+            sampfrom=0,
+            sampto=sample_count,
+        )
     return (
         waveform,
         float(fields["fs"]),
