@@ -1,0 +1,14 @@
+{
+  "class_to_index": {
+    "Fusion": 0,
+    "Normal": 1,
+    "Supraventricular ectopic": 2,
+    "Ventricular ectopic": 3
+  },
+  "index_to_class": [
+    "Fusion",
+    "Normal",
+    "Supraventricular ectopic",
+    "Ventricular ectopic"
+  ]
+}

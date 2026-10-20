@@ -1,0 +1,18 @@
+{
+  "accuracy": 0.8821158690176323,
+  "precision_weighted": 0.8250444815157163,
+  "recall_weighted": 0.8821158690176323,
+  "f1_weighted": 0.8380878884341383,
+  "test_segments": 5955,
+  "class_names": [
+    "Fusion",
+    "Normal",
+    "Supraventricular ectopic",
+    "Ventricular ectopic"
+  ],
+  "test_records": [
+    "208",
+    "209"
+  ],
+  "classification_report": "                          precision    recall  f1-score   support\n\n                  Fusion       0.86      0.21      0.34       372\n                  Normal       0.87      1.00      0.93      4205\nSupraventricular ectopic       0.00      0.00      0.00       385\n     Ventricular ectopic       0.96      1.00      0.98       993\n\n                accuracy                           0.88      5955\n               macro avg       0.67      0.55      0.56      5955\n            weighted avg       0.83      0.88      0.84      5955\n"
+}

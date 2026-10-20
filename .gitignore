@@ -1,0 +1,23 @@
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.streamlit/secrets.toml
+# The MIT-BIH dataset is supplied locally and should not be published with source.
+Project/mit-bih-arrhythmia-database-1.0.0/
+data/processed/*.npz
+data/processed/*.json
+models/*.pt
+!models/ecg_cnn.pt
+results/*.png
+results/*.json
+results/*.csv
+results/*.txt
+!results/*.png
+!results/metrics.json
+!results/classification_report.txt
+!results/confusion_matrix.csv
+screenshots/*
+!screenshots/.gitkeep

@@ -1,0 +1,10 @@
+                          precision    recall  f1-score   support
+
+                  Fusion       0.86      0.21      0.34       372
+                  Normal       0.87      1.00      0.93      4205
+Supraventricular ectopic       0.00      0.00      0.00       385
+     Ventricular ectopic       0.96      1.00      0.98       993
+
+                accuracy                           0.88      5955
+               macro avg       0.67      0.55      0.56      5955
+            weighted avg       0.83      0.88      0.84      5955
