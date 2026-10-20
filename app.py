@@ -82,7 +82,7 @@ def get_record_segments(record_name: str):
         sampling_frequency,
         annotation_samples,
         annotation_symbols,
-    )[:3]
+    )
 
 
 st.title("ECG Arrhythmia Classification System")
